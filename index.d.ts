@@ -292,6 +292,8 @@ export interface AssemblyCall extends BaseASTNode {
 }
 export interface AssemblyLocalDefinition extends BaseASTNode {
   type: 'AssemblyLocalDefinition';
+  names: Identifier[];
+  expression: AssemblyCall;
 }
 export interface AssemblyAssignment extends BaseASTNode {
   type: 'AssemblyAssignment';

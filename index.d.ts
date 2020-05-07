@@ -176,6 +176,11 @@ export interface ParameterList extends BaseASTNode {
 }
 export interface Parameter extends BaseASTNode {
   type: 'Parameter';
+  isIndexed: boolean;
+  isStateVar: boolean;
+  name?: string;
+  storageLocation?: string;
+  typeName: TypeName;
 }
 export interface VariableDeclaration extends BaseASTNode {
   type: 'VariableDeclaration';
